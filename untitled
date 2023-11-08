@@ -1,0 +1,19 @@
+customer={
+    'customerid':15691111,
+    'creditscore':648,
+    'geography': 'Germany',
+    'gender':'Female',
+    'age':42,
+    'tenure':8,
+    'balance':121980.56,
+    'numofproducts':2,
+    'hascrcard':1,
+    'isactivemember':0,
+    'estimatedsalary':4027.02,
+    'exited':0,
+    'complain':0,
+    'satisfaction_score': 1,
+    'card_type':'GOLD',
+    'point_earned':238
+
+}

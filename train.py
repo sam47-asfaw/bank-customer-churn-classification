@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[23]:
-
 
 import pickle
 
@@ -16,32 +11,16 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 
 
-# In[24]:
-
-
 C= 1.0
-
-
-# In[25]:
-
 
 n_splits = 5
 output_file = f'model_C={C}.bin'
 
 
-# In[26]:
-
 
 df = pd.read_csv("Customer-Churn-Records.csv")
 
-
-# In[27]:
-
-
 df.columns = df.columns.str.lower().str.lower().str.replace(' ','_')
-
-
-# In[28]:
 
 
 df = df.drop(columns = ['rownumber', 'surname'],axis = 1)
@@ -64,15 +43,6 @@ numerical = [
 ]
 
 categorical = ['geography','gender','card_type']
-
-
-# In[ ]:
-
-
-
-
-
-# In[31]:
 
 
 def train(df_train, y_train, C=1.0):
@@ -102,8 +72,6 @@ def predict(df, dv, model):
     return y_pred
 
 
-# In[32]:
-
 
 print('Final model training')
 
@@ -122,15 +90,6 @@ with open(output_file, 'wb') as f_out:
     pickle.dump((dv, model), f_out)
 
 print(f'The model saved to {output_file}')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
